@@ -1,4 +1,5 @@
 # GUI HW5: Web Scrabble
+https://zanite9.github.io/GUI_HW5/html/
 
 ## Student: Sunveer Dhillon  
 ## Email: sunveer_dhillon@student.uml.edu  

@@ -159,7 +159,6 @@ $(async function () {
         $('#highest').html('HIGHEST: ' + (hs));
         $('#total').html('TOTAL: ' + (total_score));
         $('#score').html('SCORE: ' + 0);
-        $('#isword').html('VALIDITY: ');
         $('#lookup').html('DICTIONARY: ');     
 
         await setup();
