@@ -26,6 +26,11 @@ h1, label {
     font-family: 'Dancing Script', cursive;
 }
 
+h2, label {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
 body {
     font-family: 'Dancing Script', cursive;
     text-align: center;
