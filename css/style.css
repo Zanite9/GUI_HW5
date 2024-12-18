@@ -1,0 +1,212 @@
+/* 
+File: style.css
+Project: Scrabble Web App
+Assignment: GUI Homework 5
+
+This file defines the CSS styling for the Scrabble web application interface. The styles include:
+
+- Layout and Structure: A grid-based layout ensures the interface is centered and adapts well to various screen sizes.
+- Interactive Buttons: Buttons for actions like starting a new game or submitting words are styled with hover and active effects to enhance usability.
+- Game Board and Tile Rack: The Scrabble board and player rack are visually distinct, with special tiles (e.g., double-word, double-letter) highlighted for easy recognition.
+- Drag-and-Drop Support: Tiles have dedicated styles for drag-and-drop functionality, including visual feedback for valid and invalid states.
+- Tile Appearance: Tiles are styled to display their letters and scores clearly, with enhanced visuals for tiles on bonus squares.
+- Score Display: Score labels, including current, total, and highest scores, are styled for prominence and readability, ensuring users can quickly track their progress.
+
+Author: Sunveer Dhillon  
+Email: sunveer_dhillon@student.uml.edu  
+Copyright (c) 2024 by Sunveer Dhillon. All rights reserved.  
+This code is free to use by anyone for business or educational purposes with credit to the author.  
+Last updated: December 2024.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+h1, label {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    margin-top: 150px;
+    background-color: #4169E1;
+    display: grid;
+    height: 50vh;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 100px; 
+}
+
+#inputbox input {
+    display: inline;         
+    margin: 10px auto;      
+    width: 70px;           
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #ddd;
+    font-family: 'Dancing Script', cursive;
+}
+
+#message-container {
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 50px; 
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9vw;
+    font-family: 'Dancing Script', cursive;
+}
+
+p {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+button {
+    width: 150px; 
+    height: 50px;
+    padding: 8px 0px;
+    font-size: 14px;
+    margin: 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+}
+
+#startOverBtn {
+    background-color: #595536;
+}
+
+#nextWordBtn {
+    background-color: #3e9f4e;
+}
+
+#nextWordBtn:active {
+    background-color: #202020;
+}
+
+button:active {
+    background-color: #202020;
+}
+
+.btn-word {
+    margin: auto;
+    background-color: #3d3d3d;
+}
+
+.board {
+    width: 5vw;
+    height: 5vw;
+    background-color: #4B0082;
+    border-radius: 4px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+}
+
+.rack {
+    width: 15vw;
+    height: 5vw;
+    background-color: #4B0082;
+    border-radius: 4px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+.slot {
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #8888883b;
+    box-sizing: border-box;
+    border-radius: 4px;
+    position: relative;
+}
+
+.slot:last-child {
+    border: none;
+}
+
+.rack-slot {
+    border: none;
+}
+
+.double-word-score {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    background-color: #c82f00;
+}
+
+.double-letter-score {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    background-color: #004fcd;
+}
+
+#double-word-score-text {
+    color: red;
+    font-family: 'Dancing Script', cursive;
+}
+
+#double-letter-score-text {
+    color: #004fcd;
+    font-family: 'Dancing Script', cursive;
+}
+
+.small-box {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    background-color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: grab;
+    position: absolute;
+    user-select: none;
+    font-family: 'Dancing Script', cursive;
+}
+
+.box-hover {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+.small-box-green {
+    background-color: #3e9f4e;
+}
+
+.score {
+    position: absolute; 
+    bottom: 3px;
+    right: 3px;
+    font-size: 0.8em;
+    font-weight: bold; 
+    font-family: 'Dancing Script', cursive;
+}
+
+.letter {
+    font-size: 1.3em;
+    font-weight: bold; 
+    font-family: 'Dancing Script', cursive;
+}
+
+#warning-message {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Dancing Script', cursive;
+}

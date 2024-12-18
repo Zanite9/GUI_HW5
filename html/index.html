@@ -1,0 +1,66 @@
+<!-- 
+File: index.html
+GUI Assignment: Homework 5
+Project: Scrabble
+
+This HTML file defines the structure for an interactive Scrabble web application. The key components of the application include:
+
+- Game Info Panel: Showcases details such as the current score, total score, highest score, remaining tiles, and dictionary information.
+- Scrabble Board: A section where players can drag and drop letter tiles to form words.
+- Tile Rack: Displays the player's available letter tiles, allowing them to create words by dragging tiles onto the board.
+- Control Buttons: Provides options to start a new game or proceed to the next word.
+- Bonus Squares: Highlights special squares, such as double-word and double-letter score tiles, with distinctive colors.
+
+This file links to external CSS for styling and jQuery UI for enhanced interactivity. It serves as the interface for the JavaScript functionality defined in index.js.
+
+Author: Sunveer Dhillon
+Email: sunveer_dhillon@student.uml.edu
+Copyright (c) 2024 by Sunveer Dhillon. All rights reserved.  
+This code is free to use by anyone for business or educational purposes with credit to the author.  
+Last updated: December 2024.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <!-- Web Scrabble Title -->
+    <header id="header-container">
+        <h1 id="web-scrabble-title">Web Scrabble</h1>
+    </header>
+    <!-- Game Information -->
+    <div id="message-container">
+        <p id="score">SCORE: </p>
+        <p id="total">TOTAL: </p>
+        <p id="highest">HIGHEST SCORE: </p>
+        <p id="remaining">REMAINING TILES:</p>
+        <p id="lookup">DICTIONARY: </p>
+        <p id="double-word-score-text">RED: DOUBLE WORD SCORE</p>
+        <p id="double-letter-score-text">BLUE: DOUBLE LETTER SCORE</p>
+    </div>
+    <!-- Main Game Board -->
+    <div id="placeholder" class="board">
+    </div>
+
+    <div id="box1" class="rack">
+    </div>
+    <!-- Game Control Buttons -->
+    <div id="button-container">
+        <button id="startOverBtn" class="button btn-word">Start Over</button>
+        <button id="nextWordBtn" class="button btn-word">Next Word</button>    
+    </div>
+
+    <p id="warning-message"></p>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
